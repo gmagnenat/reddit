@@ -1,0 +1,20 @@
+.feed {
+	width: min(600px, 100%);
+	margin-inline: auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-align: left;
+	color: black;
+}
+
+.feed__item__link {
+	text-decoration: none;
+	color: black;
+	transition: all 0.2 ease-in-out;
+}
+
+.feed__item__link:hover {
+	color: purple;
+}
