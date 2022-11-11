@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Feed.css';
+import { dataAge } from './features/dataAge';
 
 const Feed = () => {
     const [posts, setPosts] = useState([]);
@@ -29,8 +30,7 @@ const Feed = () => {
                             <p className="feed__item__sub">
                                 {data?.subreddit_name_prefixed}
                             </p>
-                            <p className="feed__item__user">{data?.author}</p>
-                            <p className="feed__item__date">...TODO...</p>
+                            <p className="feed__item__info">Posted by {data?.author}, {dataAge(data?.created)}</p>
                         </div>
                         <a
                             target="_blank"
