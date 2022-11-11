@@ -20,3 +20,8 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.hotTopic {
+    position: fixed;
+    margin-top: 2rem;
+}

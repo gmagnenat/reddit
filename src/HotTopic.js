@@ -1,25 +1,29 @@
-
-import "./HotTopic.css"
+import './HotTopic.css';
 
 const HotTopic = () => {
-
     const hotTopic = (topic) => (
         <div className="bar__hotTopic">
             <span className="fire">🔥r/</span>
-            <p>{topic}</p>
+            <a href="/" onClick={handleTopicClick}>
+                {topic}
+            </a>
         </div>
-    )
+    );
 
-  return (
+    function handleTopicClick(e) {
+        e.preventDefault();
+        console.log(e.target.innerHTML);
+    }
 
-    <div className='hotTopic'>
-        {hotTopic('AskReddit')}
-        {hotTopic('leagueoflegends')}
-        {hotTopic('Aww')}
-        {hotTopic('News')}
-        {hotTopic('Gaming')}
+    return (
+        <div className="hotTopic">
+            {hotTopic('AskReddit')}
+            {hotTopic('leagueoflegends')}
+            {hotTopic('Aww')}
+            {hotTopic('News')}
+            {hotTopic('Gaming')}
         </div>
-  )
-}
+    );
+};
 
-export default HotTopic 
+export default HotTopic;
