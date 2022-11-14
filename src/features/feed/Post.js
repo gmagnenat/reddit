@@ -1,8 +1,9 @@
 import React from 'react';
 import './Post.css';
-import { dataAge } from './features/dataAge';
+import { dataAge } from '../dataAge';
 
 const Post = ({ post, baseUrl }) => {
+    console.log(post);
     return (
         <div key={post.id} className="post">
             <div className="post__main">
