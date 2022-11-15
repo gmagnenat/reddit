@@ -25,7 +25,7 @@ function App() {
         };
 
         getApiData();
-    }, [selectSub.sub]);
+    }, [selectSub.sub, dispatch]);
     return (
         <div className="App">
             <Header />
