@@ -1,0 +1,85 @@
+.post {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.post__top__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.post > * {
+    width: 100%;
+    margin-block: 0.2rem;
+}
+
+.post__votes {
+    display: flex;
+    flex-direction: row;
+}
+
+.post__votes > * {
+    display: inline-block;
+}
+
+.post__votes > svg {
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
+
+.post__main > * {
+    margin-block: 0.5rem;
+}
+
+.post__main img {
+    width: 100%;
+    object-fit: contain;
+    /* margin: 0.5rem 1rem 0 1rem; */
+}
+
+.post__top__info > * {
+    margin-right: 1rem;
+}
+
+.post__sub {
+    font-weight: bold;
+}
+
+.post__top__info > * {
+    display: inline-block;
+}
+
+.post__link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    transition: all 0.2 ease-in-out;
+}
+
+.post__link:hover {
+    color: purple;
+}
+
+.post__bottom {
+    margin: 0;
+}
+
+.post__bottom > * {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.post__bottom__icon {
+    height: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 2px;
+}

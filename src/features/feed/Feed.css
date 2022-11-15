@@ -1,0 +1,13 @@
+p {
+    margin: 0;
+}
+
+.feed {
+    width: min(400px, 100%);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    color: black;
+}
