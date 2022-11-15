@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.css';
 import { dataAge } from '../dataAge';
 
-const Post = ({ post, baseUrl }) => {
+const Post = ({ post }) => {
     console.log(post);
     return (
         <div key={post.id} className="post">
@@ -17,7 +17,7 @@ const Post = ({ post, baseUrl }) => {
                     target="_blank"
                     rel="noreferrer"
                     className="post__link"
-                    href={`${baseUrl}/${post.permalink}`}
+                    href={`https://www.reddit.com/${post?.permalink}`}
                 >
                     {post.title}
                 </a>
