@@ -1,27 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { Counter } from './features/counter/Counter';
 import './App.css';
 import Header from './Header';
-import Feed from './Feed';
+import { Feed } from './features/feed/Feed';
 import HotTopic from './HotTopic';
+import { useDispatch } from 'react-redux';
+import { setPosts } from './features/feed/feedSlice';
 
 function App() {
-	return (
-		<div className='App'>
-			<Header />
+    const dispatch = useDispatch();
+    const limit = 5;
+    const baseUrl = 'https://www.reddit.com';
 
-			{/* App Body */}
+    useEffect(() => {
+        const getApiData = async () => {
+            const response = await fetch(
+                `${baseUrl}/r/popular.json?limit=${limit}`
+            ).then((response) => response.json());
 
-			{/* Reddit Feed */}
+            dispatch(setPosts(response.data.children));
+        };
 
-			{/* Feed */}
-			<div className="app_body">
-			<Feed />
-			<HotTopic />
+        getApiData();
+    }, []);
+    return (
+        <div className="App">
+            <Header />
 
-			</div>
-		</div>
-	);
+            {/* App Body */}
+
+            {/* Reddit Feed */}
+
+            {/* Feed */}
+            <div className="app_body">
+                <Feed />
+                <HotTopic />
+            </div>
+        </div>
+    );
 }
 
 export default App;
