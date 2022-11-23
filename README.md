@@ -1,4 +1,4 @@
-# Group project. Learning how to play with data comming from reddit.
+# Group project. Learning how to play with data coming from reddit.
 
 We use the json data given by reddit  
 
