@@ -7,8 +7,12 @@
     height: fit-content;
     text-align: center;
     border-radius: 50px;
-    margin-left: 30px;
+    margin-left: 2vw;
     padding: 1px;
+}
+
+.bar__hotTopic p {
+    margin-right: 3px;
 }
 
 .bar__hotTopic:hover {
@@ -24,4 +28,10 @@
 .hotTopic {
     position: fixed;
     margin-top: 2rem;
+}
+
+@media only screen and (max-width: 720px) {
+    .bar__hotTopic {
+        display: none;
+    }
 }

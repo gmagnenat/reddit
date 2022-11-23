@@ -6,6 +6,7 @@ import { Feed } from './features/feed/Feed';
 import HotTopic from './features/HotTopic/HotTopic';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPosts } from './features/feed/feedSlice';
+import { ToTop } from './features/ToTop/ToTop';
 
 function App() {
 
@@ -39,7 +40,9 @@ function App() {
                 <Feed />
                 <HotTopic />
             </div>
+            <ToTop />
         </div>
+        
     );
 }
 

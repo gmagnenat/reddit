@@ -1,0 +1,26 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+.to__top {
+    position: fixed;
+    z-index: 1000;
+    right: 4vw;
+    bottom: 3vw;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #000;
+    background-color: rgb(233, 230, 230);
+    border-radius: 50%;
+}
+
+.to__top:hover {
+    background-color: gray;
+    color: white;
+}
+
+
